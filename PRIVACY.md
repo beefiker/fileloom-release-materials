@@ -10,7 +10,7 @@ Jaeyeong Lee. Questions and requests: **beefiker@gmail.com**.
 Fileloom reads the files and folders you choose or authorize through iOS. It uses
 file information to show your library, recent files and previews. Reading
 positions, bookmarks, annotations, preferences and downloaded assets are stored
-on your device. Fileloom does not upload your document text to its voice-download
+on your device and can be synced as described below. Fileloom does not upload your document text to its voice-download
 service for speech generation; downloaded AI speech models run on the device.
 
 Fileloom has no required Fileloom account. It does not use advertising identifiers
@@ -21,8 +21,12 @@ or cross-app advertising tracking.
 - **Cloud and network storage:** If you connect a provider or server, Fileloom
   communicates with that service to perform the file operations you request.
   Cloud account authorization and credentials use the platform's authentication
-  and secure-storage facilities. Optional sync transfers the reading data and
-  settings you enable to your selected provider.
+  and secure-storage facilities. When a supported cloud account is connected,
+  reading-progress sync and markup sync start enabled; you can turn either off
+  in Settings. Synced records can include account and file identifiers, a Google
+  account email address, a random app device identifier, reading positions,
+  timestamps, bookmark labels and annotation notes. They are retained in your
+  selected provider's app-data folder and linked to that account.
 - **AI voice downloads:** The download service receives a random installation
   identifier, the requested model information and the accepted model-license
   version. Network infrastructure also receives normal connection information,
@@ -44,7 +48,9 @@ services is optional; their own privacy terms also apply.
 You can remove local downloads and saved items in the app, disconnect accounts,
 and revoke folder access. Removing a library reference does not delete its
 original file. Files in a cloud account or on another server remain subject to
-your actions and that provider's retention rules. iOS backups and secure storage
+your actions and that provider's retention rules. Disconnecting an account or
+removing Fileloom does not delete existing cloud-sync records. Use the provider's
+storage or connected-app controls to remove those records. iOS backups and secure storage
 are managed by the operating system and may have different lifetimes from the app.
 
 The voice-delivery service uses short-lived grants rather than a Fileloom user
